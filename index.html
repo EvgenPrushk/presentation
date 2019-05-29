@@ -29,56 +29,90 @@
 			<section>
 				<h1>Сanvas</h1>
 			</section>
-			
+			<section>
+				<h2 style="color:orange">Introduction</h2>
+				<p>Today I will tell you about the canvas element, what it is for, what it gives to a developer and to
+					users, what do you need and what you don’t need to display it properly, what you should do to make
+					it work. Also we will have some fun with different methods and in the end, please, be ready for
+					something exciting.
+				</p>
+			</section>
+
+			<section>
+				<h2 style="color:orange">Canvas API </h2>
+				<p>Canvas Application Programming Interface is one of the most popular features in HTML5. Developers like to
+					use it for creating rich web applications and users may use those applications without using browser
+					plug-ins like Adobe's flash player. Most of the modern browsers support it. In a moment we will see
+					what canvas is capable of and how you may use it.</p>
+			</section>
+
+			<section>
+				<h2 style="color:orange">Canvas usage </h2>
+				<p>Officially a canvas is a resolution-dependent bitmap canvas which can be used to draw graphs, game
+					graphics, animation, or other visual images on the fly. Among other things, it can be used
+					for real-time video processing. Simply saying, with the help of JavaScript and HTML5 canvas element
+					you may draw 2D shapes and bitmap images. </p>
+			</section>
+
+			<section>
+				<h2 style="color:orange"> Canvas  context</h2>
+				<p>A webpage may contain multiple canvas elements. Each canvas may have an id using which you may target
+					a specific canvas through JavaScript. Each canvas element has a 2D Context. This again has objects,
+					properties, and methods. Using these you may draw your stuff. To draw on a canvas, you need to refer
+					the context of the canvas. The context gives you access to the 2D properties and methods that we’ll
+					dive deeper into later.</p>
+			</section>
+
 			<section>
 				<h2>Simple method</h2>
 				<h3 style="color:greenyellow">beginPath()</h3>
 				<ul>
-					<li>Creates a new path. Once created, future drawing commands are directed into the path and used to build the path up</li>
+					<li>Creates a new path. Once created, future drawing commands are directed into the path and used to
+						build the path up</li>
 				</ul>
 				<h3 style="color:greenyellow">closePath()</h3>
 				<ul>
 					<li>Adds a straight line to the path, going to the start of the current sub-path</li>
-				</ul>	
-			</section>								
-					
-			<section>	
+				</ul>
+			</section>
+
+			<section>
 				<section>
-						<h2 style="color:orange">Drawing  lines</h2>
-						<h3 style="color:greenyellow">method  lineTo(x, y)</h3>												
-						<ul >
-							<li>x-axis coordinate of the line's end point</li>
-							<li>y-axis coordinate of the line's end point</li>							
-						</ul>
+					<h2 style="color:orange">Drawing lines</h2>
+					<h3 style="color:greenyellow">method lineTo(x, y)</h3>
+					<ul>
+						<li>x-axis coordinate of the line's end point</li>
+						<li>y-axis coordinate of the line's end point</li>
+					</ul>
 				</section>
 
-				<section>				 
-				 <h3 >Html</h3>
-				 <pre><code><canvas id="canvas"></canvas></code></pre>
-				 <h3>Javascript</h3>
-				 <pre><code>const canvas = document.getElementById('canvas');</code><code>const ctx = canvas.getContext('2d');</code><code>ctx.beginPath();     // Start a new path</code><code>ctx.moveTo(100, 200); // Move the pen to (100, 200)</code><code>ctx.lineTo(300, 50);// Draw a line to (300, 50)</code><code>ctx.stroke();// Render the path</code></pre>
+				<section>
+					<h3>Html</h3>
+					<pre><code><canvas id="canvas"></canvas></code></pre>
+					<h3>Javascript</h3>
+					<pre><code>const canvas = document.getElementById('canvas');</code><code>const ctx = canvas.getContext('2d');</code><code>ctx.beginPath();     // Start a new path</code><code>ctx.moveTo(100, 200); // Move the pen to (100, 200)</code><code>ctx.lineTo(300, 50);// Draw a line to (300, 50)</code><code>ctx.stroke();// Render the path</code></pre>
 				</section>
 
 				<section>
 					<h2 style="color:orange">Browser view</h2>
-					<img src="lib/img/line.bmp" alt="line"/>
+					<img src="lib/img/line.bmp" alt="line" />
 				</section>
 			</section>
-			
+
 			<section>
 				<section>
 					<h2 style="color:orange">Drawing rectangle</h2>
-					<h3 style="color:greenyellow">method  rect(x, y, width, height);</h3>
-					<ul >
+					<h3 style="color:greenyellow">method rect(x, y, width, height);</h3>
+					<ul>
 						<li>x-axis coordinate of the rectangle's starting point.</li>
 						<li>y-axis coordinate of the rectangle's starting point.</li>
 						<li>The rectangle's width. Positive values are to the right, and negative to the left.</li>
 						<li>The rectangle's height. Positive values are down, and negative are up.</li>
-					</ul>							
+					</ul>
 				</section>
 
 				<section>
-					<h3 >Html</h3>
+					<h3>Html</h3>
 					<pre><code><canvas id="canvas"></canvas></code></pre>
 					<h3>Javascript</h3>
 					<pre><code>const canvas = document.getElementById('canvas');</code><code>const ctx = canvas.getContext('2d');</code><code>ctx.rect(50, 50, 100, 75);</code></pre>
@@ -86,67 +120,72 @@
 
 				<section>
 					<h2 style="color:orange">Browser view</h2>
-					<img src="lib/img/rectangle.bmp" alt="line"/>
+					<img src="lib/img/rectangle.bmp" alt="line" />
 				</section>
 			</section>
 
 			<section>
-					<section>
-						<h2 style="color:orange">Drawing circle</h2>
-						<h3 style="color:greenyellow">method  ctx.arc(x, y, radius, startAngle, endAngle, [anticlockwise]);</h3>
-						<ul >
-							<li>x-axis (horizontal) coordinate of the arc's center</li>
-							<li>y-axis (horizontal) coordinate of the arc's center</li>
-							<li>The angle at which the arc starts, measured clockwise from the positive x-axis and expressed in radians</li>
-							
-						</ol>							
-					</section>
-					
-					<section>
-						<ul>
-							<li>The angle at which the arc starts, measured clockwise from the positive x-axis and expressed in radians.</li>
-							<li>The angle at which the arc ends, measured clockwise from the positive x-axis and expressed in radians</li>
-							<li>An optional Boolean which, if true, causes the arc to be drawn counter-clockwise between the start and end angles. The default value is false (clockwise)</li>
-						</ul>
-					</section>
-					<section>
-						<h3 >Html</h3>
-						<pre><code><canvas id="canvas"></canvas></code></pre>
-						<h3>Javascript</h3>
-						<pre><code>const canvas = document.getElementById('canvas');</code><code>const ctx = canvas.getContext('2d');</code><code>ctx.arc(200, 100, 50, 0, 3 * Math.PI);</code><code>ctx.stroke();</code></pre>
-					</section>
-	
-					<section>
-							<h2 style="color:orange">Browser view</h2>
-							<img src="lib/img/circle.bmp" alt="line"/>
-					</section>
+				<section>
+					<h2 style="color:orange">Drawing circle</h2>
+					<h3 style="color:greenyellow">method ctx.arc(x, y, radius, startAngle, endAngle, [anticlockwise]);
+					</h3>
+					<ul>
+						<li>x-axis (horizontal) coordinate of the arc's center</li>
+						<li>y-axis (horizontal) coordinate of the arc's center</li>
+						<li>The angle at which the arc starts, measured clockwise from the positive x-axis and expressed
+							in radians</li>
+
+						</ol>
 				</section>
 
 				<section>
-					<section>
-						<h2>Simple quiz</h2>
-						<pre></pre>
-					</section>
-
-					<section>
-							<h2 style="color:orange">Browser view</h2>
-					</section>
+					<ul>
+							<li>The angle at which the arc starts, measured clockwise from the positive x-axis and expressed
+								in radians.</li>
+							<li>The angle at which the arc ends, measured clockwise from the positive x-axis and expressed
+								in radians</li>
+							<li>An optional Boolean which, if true, causes the arc to be drawn counter-clockwise between the
+								start and end angles. The default value is false (clockwise)</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Html</h3>
+					<pre><code><canvas id="canvas"></canvas></code></pre>
+					<h3>Javascript</h3>
+					<pre><code>const canvas = document.getElementById('canvas');</code><code>const ctx = canvas.getContext('2d');</code><code>ctx.arc(200, 100, 50, 0, 3 * Math.PI);</code><code>ctx.stroke();</code></pre>
 				</section>
 
 				<section>
-						<section>
-							<h2>Simple quiz</h2>
-							<h3>What you will see in the browser</h3>
-							<pre>
+					<h2 style="color:orange">Browser view</h2>
+					<img src="lib/img/circle.bmp" alt="line" />
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h2>Simple quiz</h2>
+					<pre></pre>
+				</section>
+
+				<section>
+					<h2 style="color:orange">Browser view</h2>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h2>Simple quiz</h2>
+					<h3>WHAT WILL YOU SEE IN THE BROWSER </h3>
+					<pre>
 								<code>ctx.beginPath();</code><code>ctx.arc(75, 75, 50, 0, Math.PI * 2, true);</code><code>ctx.moveTo(110, 75);</code><code>ctx.arc(75, 75, 35, 0, Math.PI, false);</code><code>ctx.moveTo(65, 65);</code><code>ctx.arc(60, 65, 5, 0, Math.PI * 2, true);</code><code>ctx.moveTo(95, 65);</code><code>ctx.arc(90, 65, 5, 0, Math.PI * 2, true);</code><code>ctx.stroke();</code>
 							</pre>
-						</section>
-	
-						<section>
-								<h2 style="color:orange">Browser view</h2>
-						</section>
-					</section>
-	
+				</section>
+
+				<section>
+					<h2 style="color:orange">Browser view</h2>
+				</section>
+			</section>
+
 
 
 		</div>
