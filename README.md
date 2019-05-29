@@ -2,7 +2,7 @@ Task: https://github.com/rolling-scopes-school/tasks/blob/2018-Q3/tasks/presenta
 
 Presentation: https://evgenprushk.github.io/presentation/
 
-Transcript: https://github.com/EvgenPrushk/presentation/edit/master/README.md
+Transcript: https://github.com/EvgenPrushk/presentation/blob/master/README.md
 ## Canvas
 # slide1 
 Today I will tell you about the <canvas> element, what it is for, what it gives to a developer and to users, what do you need and what you don’t need to display it properly, what you should do to make it work. Also we will have some fun with different methods and in the end, please, be ready for something exciting. 
